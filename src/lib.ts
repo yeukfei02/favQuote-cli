@@ -20,7 +20,7 @@ export async function getListQuote(params?: any) {
   );
   if (response) {
     const responseJSON = await response.json();
-    if (responseJSON) {
+    if (responseJSON && responseJSON.quotes) {
       responseJSON.quotes.forEach((item: any, i: number) => {
         result += `${i + 1} - ${item.body}\n`;
       });
