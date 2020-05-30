@@ -1,8 +1,14 @@
-# favQuote-cli
+import { getListQuote, getRandomQuote } from "./src/lib.ts";
 
-Get favourite or random quote cli
+async function favQuote() {
+  const argsList = Deno.args;
 
-```
+  if (argsList) {
+    const item = argsList[0];
+
+    if (item) {
+      if (item.includes("help")) {
+        console.log(`
 favQuote --help
 
 Usage
@@ -26,29 +32,28 @@ $ favQuote --list-quote hello
 
 $ favQuote --random-quote
 Every positive value has its price in negative terms... the genius of Einstein leads to Hiroshima.
-```
+            `);
+      }
 
-## Requirement:
- - install deno (1.0.2)
+      if (item.includes("list-quote")) {
+        const filterWord = argsList[1];
 
-## Testing and run:
-```
-// install deps
-$ deno cache main.ts
+        let params = {};
+        if (filterWord) {
+          params = {
+            filter: filterWord,
+          };
+        }
+        const result = await getListQuote(params);
+        console.log(result);
+      }
 
-// run in local
-$ deno run --allow-net main.ts --help
+      if (item.includes("random-quote")) {
+        const result = await getRandomQuote();
+        console.log(result);
+      }
+    }
+  }
+}
 
-// allow all permission
-$ deno run -A main.ts --help
-
-// run test case
-$ deno test --allow-net
-
-// format code
-$ deno fmt
-
-// build cli
-$ deno install --allow-net --name favQuote main.ts
-```
-
+favQuote();
