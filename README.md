@@ -3,6 +3,10 @@
 Get favourite or random quote cli
 
 ```
+$ deno install --allow-net -f --name favQuote https://deno.land/x/favQuote_cli/main.ts
+```
+
+```
 favQuote --help
 
 Usage
@@ -49,6 +53,6 @@ $ deno test --allow-net
 $ deno fmt
 
 // build cli
-$ deno install --allow-net --name favQuote main.ts
+$ deno install --allow-net -f --name favQuote main.ts
 ```
 
