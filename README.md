@@ -8,9 +8,10 @@ $ deno install --allow-net -f --name favQuote https://deno.land/x/favQuote_cli/m
 
 ```
 favQuote
+Get favourite or random quote cli
 
 Usage
-    $ favQuote [options]
+    favQuote [options]
 
 Options
     --help -h help                            Show help
