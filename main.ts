@@ -16,7 +16,7 @@ async function favQuote() {
       }
 
       if (item === "--version" || item === "-v" || item === "version") {
-        console.log("v0.1.2");
+        console.log("v0.1.3");
       }
 
       if (item === "--list-quote" || item === "-lq" || item === "list-quote") {
@@ -50,12 +50,16 @@ function getHelpText() {
 favQuote
 
 Usage
+    $ favQuote --help
+    $ favQuote --version
     $ favQuote --list-quote [filterWord]
     $ favQuote --random-quote
 
 Options
-    --list-quote [filterWord]   Get list of qoute / Get list of quote with word
-    --random-quote              Get random qoute
+    --help, -h, help                            Show help
+    --version, -v, version                      Show version
+    --list-quote, -lq, list-quote [filterWord]  Get list of qoute / Get list of quote with word
+    --random-quote, -rq, random-quote           Get random qoute
 
 Examples
 $ favQuote --list-quote
