@@ -7,7 +7,7 @@ $ deno install --allow-net -f --name favQuote https://deno.land/x/favQuote_cli/m
 ```
 
 ```
-favQuote --help
+favQuote
 
 Usage
     $ favQuote --help

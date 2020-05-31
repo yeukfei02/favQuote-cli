@@ -7,9 +7,47 @@ async function favQuote() {
     const item = argsList[0];
 
     if (item) {
-      if (item === "--help" || item === "-h" || item === "help") {
-        console.log(`
-favQuote --help
+      if (
+        item === "--help" || item === "-h" ||
+        item === "help"
+      ) {
+        const helpText = getHelpText();
+        console.log(helpText);
+      }
+
+      if (item === "--version" || item === "-v" || item === "version") {
+        console.log("v0.1.2");
+      }
+
+      if (item === "--list-quote" || item === "-lq" || item === "list-quote") {
+        const filterWord = argsList[1];
+
+        let params = {};
+        if (filterWord) {
+          params = {
+            filter: filterWord,
+          };
+        }
+        const result = await getListQuote(params);
+        console.log(result);
+      }
+
+      if (
+        item === "--random-quote" || item === "-rq" || item === "random-quote"
+      ) {
+        const result = await getRandomQuote();
+        console.log(result);
+      }
+    } else {
+      const helpText = getHelpText();
+      console.log(helpText);
+    }
+  }
+}
+
+function getHelpText() {
+  return `
+favQuote
 
 Usage
     $ favQuote --list-quote [filterWord]
@@ -32,34 +70,7 @@ $ favQuote --list-quote hello
 
 $ favQuote --random-quote
 Every positive value has its price in negative terms... the genius of Einstein leads to Hiroshima.
-            `);
-      }
-
-      if (item === "--version" || item === "-v" || item === "version") {
-        console.log("v0.1.1");
-      }
-
-      if (item === "--list-quote" || item === "-lq" || item === "list-quote") {
-        const filterWord = argsList[1];
-
-        let params = {};
-        if (filterWord) {
-          params = {
-            filter: filterWord,
-          };
-        }
-        const result = await getListQuote(params);
-        console.log(result);
-      }
-
-      if (
-        item === "--random-quote" || item === "-rq" || item === "random-quote"
-      ) {
-        const result = await getRandomQuote();
-        console.log(result);
-      }
-    }
-  }
+  `;
 }
 
 favQuote();
