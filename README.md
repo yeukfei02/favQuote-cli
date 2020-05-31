@@ -10,16 +10,13 @@ $ deno install --allow-net -f --name favQuote https://deno.land/x/favQuote_cli/m
 favQuote
 
 Usage
-    $ favQuote --help
-    $ favQuote --version
-    $ favQuote --list-quote [filterWord]
-    $ favQuote --random-quote
+    $ favQuote [options]
 
 Options
-    --help, -h, help                            Show help
-    --version, -v, version                      Show version
-    --list-quote, -lq, list-quote [filterWord]  Get list of qoute / Get list of quote with word
-    --random-quote, -rq, random-quote           Get random qoute
+    --help -h help                            Show help
+    --version -v version                      Show version
+    --list-quote -lq list-quote <filterWord>  Get list of qoute / Get list of quote with word
+    --random-quote -rq random-quote           Get random qoute
 
 Examples
 $ favQuote --list-quote
