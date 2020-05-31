@@ -16,7 +16,7 @@ async function favQuote() {
       }
 
       if (item === "--version" || item === "-v" || item === "version") {
-        console.log("v0.1.3");
+        console.log("v0.1.4");
       }
 
       if (item === "--list-quote" || item === "-lq" || item === "list-quote") {
