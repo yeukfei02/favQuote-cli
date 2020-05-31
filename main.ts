@@ -50,30 +50,13 @@ function getHelpText() {
 favQuote
 
 Usage
-    $ favQuote --help
-    $ favQuote --version
-    $ favQuote --list-quote [filterWord]
-    $ favQuote --random-quote
+    $ favQuote [options]
 
 Options
-    --help, -h, help                            Show help
-    --version, -v, version                      Show version
-    --list-quote, -lq, list-quote [filterWord]  Get list of qoute / Get list of quote with word
-    --random-quote, -rq, random-quote           Get random qoute
-
-Examples
-$ favQuote --list-quote
-1 - Being Irish, he had an abiding sense of tragedy, which sustained him through temporary periods of joy.
-2 - Whoever is happy will make others happy too.
-...
-
-$ favQuote --list-quote hello
-1 - I grew up where my parents would literally shove me in the car rather than have to say hello to a neighbor.
-2 - Sometimes just when I say hello the right way, I'm like, 'Whoa, I'm so cool.'
-...
-
-$ favQuote --random-quote
-Every positive value has its price in negative terms... the genius of Einstein leads to Hiroshima.
+    --help -h help                            Show help
+    --version -v version                      Show version
+    --list-quote -lq list-quote <filterWord>  Get list of qoute / Get list of quote with word
+    --random-quote -rq random-quote           Get random qoute
   `;
 }
 
