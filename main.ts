@@ -7,7 +7,7 @@ async function favQuote() {
     const item = argsList[0];
 
     if (item) {
-      if (item.includes("help")) {
+      if (item === "--help" || item === "-h" || item === "help") {
         console.log(`
 favQuote --help
 
@@ -35,7 +35,11 @@ Every positive value has its price in negative terms... the genius of Einstein l
             `);
       }
 
-      if (item.includes("list-quote")) {
+      if (item === "--version" || item === "-v" || item === "version") {
+        console.log("v0.1.1");
+      }
+
+      if (item === "--list-quote" || item === "-lq" || item === "list-quote") {
         const filterWord = argsList[1];
 
         let params = {};
@@ -48,7 +52,9 @@ Every positive value has its price in negative terms... the genius of Einstein l
         console.log(result);
       }
 
-      if (item.includes("random-quote")) {
+      if (
+        item === "--random-quote" || item === "-rq" || item === "random-quote"
+      ) {
         const result = await getRandomQuote();
         console.log(result);
       }
