@@ -35,7 +35,7 @@ Every positive value has its price in negative terms... the genius of Einstein l
 ```
 
 ## Requirement:
- - install deno (1.0.2)
+ - install deno
 
 ## Testing and run:
 ```
