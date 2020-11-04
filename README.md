@@ -2,8 +2,10 @@
 
 Get favourite or random quote cli
 
-```
+```ts
+// pick 1 to import
 $ deno install --allow-net -f --name favQuote https://deno.land/x/favQuote_cli/main.ts
+$ deno install --allow-net -f --name favQuote https://x.nest.land/favQuote-cli@0.1.8/main.ts
 ```
 
 ```
@@ -35,9 +37,11 @@ Every positive value has its price in negative terms... the genius of Einstein l
 ```
 
 ## Requirement:
- - install deno
+
+- install deno
 
 ## Testing and run:
+
 ```
 // install deps
 $ deno cache main.ts
