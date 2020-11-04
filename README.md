@@ -5,7 +5,7 @@ Get favourite or random quote cli
 ```ts
 // pick 1 to import
 $ deno install --allow-net -f --name favQuote https://deno.land/x/favQuote_cli/main.ts
-$ deno install --allow-net -f --name favQuote https://x.nest.land/favQuote-cli@0.1.8/main.ts
+$ deno install --allow-net -f --name favQuote https://x.nest.land/favQuote-cli/main.ts
 ```
 
 ```
