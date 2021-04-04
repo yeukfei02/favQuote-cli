@@ -8,7 +8,7 @@ $ deno install --allow-net -f --name favQuote https://deno.land/x/favQuote_cli/m
 $ deno install --allow-net -f --name favQuote https://x.nest.land/favQuote-cli/main.ts
 ```
 
-```
+```zsh
 favQuote
 Get favourite or random quote cli
 
@@ -36,13 +36,13 @@ $ favQuote --random-quote
 Every positive value has its price in negative terms... the genius of Einstein leads to Hiroshima.
 ```
 
-## Requirement:
+## Requirement
 
 - install deno
 
-## Testing and run:
+## Testing and run
 
-```
+```zsh
 // install deps
 $ deno cache main.ts
 
